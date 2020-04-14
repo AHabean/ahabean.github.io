@@ -1,0 +1,594 @@
+
+/*===== General =====*/
+
+html, body {
+    width : 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /*font-family: 'Lato', sans-serif;*/
+    font-family: 'Roboto', sans-serif;
+    overflow-x:hidden;  
+    background-color: #f3f3f3 !important;
+    color: #053259 !important;
+    
+}
+
+/*===== Media =====*/
+@media (max-width: 768px) {
+    #aboutMe h1,
+    #skills h1,
+    #experience h1,
+    #education h1,
+    #portfolio h1,
+    #contact h1 {
+        line-height: 1.2 !important;
+        font-size: 25px !important;
+    }
+    #aboutMe h4 {
+        padding-top: 20px !important;
+        font-size: 18px !important;
+        text-align: justify !important;
+        text-indent: 30px !important;
+    } 
+
+    .socialMedia {
+       width: 100% !important;
+       font-size: 12px !important;
+       letter-spacing: 10px !important;
+    }
+
+    .socialMedia a:hover {
+       -webkit-transform: none;
+        -ms-transform: none;
+        transform: none !important;
+        -webkit-transition: none; 
+        -ms-transition: none; 
+        transition: none !important;  
+      }
+
+      footer {
+          height: auto !important;
+      }
+
+      footer .container-fluid {
+          padding: 0px !important;
+          margin: 0px !important;
+      }
+
+      .arrowUp {
+        width:30px !important;
+        height:30px !important;
+        font-size: 20px !important;
+        top:-15px !important;
+        transition: none !important;
+      } 
+
+      .arrowDown {
+        font-size: 20px !important;
+        transition: none !important;
+        width:30px !important;
+        height:30px !important;
+    }
+    #banner h1 {
+        font-size: 28px !important;
+        line-height: 1.2 !important;
+    }
+    
+    #banner h2 {
+        font-size: 20px !important;
+    }
+
+    #skills h5,
+    #education .card-body h5 {
+        font-size: 14px !important;
+    }
+
+    #experience h3,
+    #education h3 {
+        font-size: 16px !important;
+    }
+
+    #experience .card-body p,
+    #experience .card-body h6,
+    #experience .card-footer p,
+    #education .card-body p,    
+    #education .card-footer a {
+        font-size: 13px !important;
+    }
+    .txt,
+    #experience .card-body li {
+        font-size: 12px !important;
+    }
+    form ::placeholder{
+        font-size: 9px !important;
+        text-align: left;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .form-group button {
+        font-size: 10px !important;
+    }
+    .form-group i {
+        font-size: 12px !important;
+
+    }
+    #navbar ul li a:hover{
+        background: rgb(39, 39, 39) !important; 
+        color: #D9560B !important;
+        animation: none !important;
+    }
+    #navbar ul li a {
+        padding: 8px 15px !important;
+        font-size: 14px !important;
+        font-weight: normal !important;
+        text-transform: capitalize !important;
+    }
+    .spaceAround {
+        padding: 5px !important;        
+    }
+    .navbar-toggler {
+        font-size: 15px !important;
+        padding: 5px !important;        
+    }
+    #navbar .active {
+        background: none !important; 
+        color: #f3f3f3 !important;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    #banner {
+      background-attachment: fixed;
+    }
+  }
+
+
+
+/*===== Banner parallax =====*/
+#header {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    height: 100%;
+    width: 100%;
+}
+#banner {
+    height: 100vh;
+    color: #D9560B;
+    /*background-image: url(/assets/img/project/earth.svg); */
+    background-image: url('../img/project/earth.jpg');  
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #f3f3f3;
+}
+
+/*===== Navbar =====*/
+
+.arrowDown {
+    margin: 5px;
+    padding-top: 0px;
+    font-size: 40px;
+    transition: 1s all;
+    color: #D9560B;
+    width:60px;
+    height:60px;
+}
+
+.arrowUp {
+    margin: auto;
+    padding: 0px;
+    width:60px;
+    height:60px;
+    font-size: 40px;
+    color: #f3f3f3;
+    position: relative;   
+    top:-30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: 1s all;
+}
+
+.arrowDown:hover {
+    color: #f3f3f3;
+    padding-top: 15px;
+}
+.arrowUp:hover {
+    color: #D9560B;
+    top: -45px;
+}
+
+#banner h1 {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 2;
+}
+
+#banner h2 {
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 0.8;   
+}
+
+#navbar,
+#navbar .container {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.navbar {
+    padding: 0 !important;
+}
+
+.bottom-nav {	
+	position: absolute;
+    z-index:999;
+    bottom:0px;
+    width: 100%;
+}
+
+#navbar ul li a {
+    padding: 15px 50px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;  
+    color: #f3f3f3;  
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+#navbar ul li:hover{
+    background-color: rgb(70, 70, 70); 
+    border-radius: 1px;
+    padding: 0px;
+    margin: 0px;
+    height: auto;
+}
+#navbar ul li a:hover{
+    color: #D9560B;
+    position: relative;
+    animation: jumping 0.5s 1;
+}
+/*
+#collapsibleNavbar {
+    display: none;
+}
+*/
+@keyframes jumping {
+    0% {
+        transform:translateY(0)
+    }
+    25% {
+        transform:translateY(-10px)
+    }
+    75% {
+        transform:translateY(10px)
+    }
+    100% {
+        transform:translateY(0)
+    }
+}
+
+.top-nav {	
+	position: fixed;
+    top: 0 !important;
+    z-index:999;
+    width: 100%;
+}
+
+#navbar .active {
+    background: rgb(39, 39, 39); 
+    color: #D9560B;
+}
+
+.nav-item .active:hover {
+    animation: none !important;
+}
+
+nav button:focus {
+    outline: 0 !important;
+}
+
+
+/*===== About me =====*/
+
+.main {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;   
+}
+
+.avatarContent {
+	position:relative;
+    width: 90%;
+    height: 100%;
+	padding:20px;
+	margin: 0px;
+}
+
+.avatarContent,.avatarContent:before,.avatarContent:after {
+	background-color:#f3f3f3 ;
+    border:1px solid #f3f3f3;
+    border-radius: 5px;
+	box-shadow:inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
+}
+
+.avatarContent:before,.avatarContent:after {
+	content:"";
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	-webkit-transform:rotateZ(-3deg);
+	-o-transform:rotate(-3deg);
+	transform:rotateZ(-3deg);
+    z-index:-1;
+    -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: -10 30px 0px rgba(0, 0, 0, 0.3);  
+}
+.avatarContent:after {
+	-webkit-transform:rotateZ(3deg);
+	-o-transform:rotate(3deg);
+    transform:rotateZ(3deg);
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+    box-shadow: 0px 10px 14px rgba(0, 0, 0, .4);
+}
+
+.avatarContent img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+#aboutMe h1,
+#skills h1,
+#experience h1,
+#education h1,
+#portfolio h1,
+#contact h1 {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 2;
+    color: #D9560B;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+#aboutMe h4 {
+    text-align: justify;
+    text-indent: 50px;
+} 
+
+
+/*===== Progress bar ====== */
+.bckground {
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+    background-color: rgba(221, 221, 220, 0.856);
+    background-size: cover;
+    -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+    border-radius: 10px;
+}
+
+.progressBar-width {
+    width: 90% !important; 
+    vertical-align: middle !important;
+}
+
+.progress .progress-bar {
+    width: 0;
+    -moz-animation: progress 0.9s ease-in-out forwards;
+    -webkit-animation: progress 0.9s ease-in-out forwards;
+    animation: progress 0.9s ease-in-out forwards;
+    background-color: #D9560B !important;
+}
+
+.alt {
+    background-color: rgb(255, 255, 255) !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+
+  @keyframes show {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+}
+
+/*===== End Progress bar ======*/
+
+/*===== Experience = Flip card ======*/
+.card-flip > div {
+    backface-visibility: hidden;
+    transition: transform 300ms;
+    transition-timing-function: linear;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+  }
+  
+  .card-back {  
+      width: 100%;
+      height: 100%; 
+      background-color: #f3f3f3; 
+      transform: rotateY(180deg);
+      position: absolute;
+      border-radius: 0.25rem;
+      margin: 0;
+      padding: 0;
+      top: 0;
+  }
+
+  .card-front,
+  .card-back {
+       backface-visibility: hidden;
+  }
+
+.card-flip:hover .card-front > .card-header,
+.card-flip:hover .card-front > .card-body,
+.card-flip:hover .card-front > .card-footer {
+    transform: rotateY(-180deg);
+  }
+    
+.card-flip:hover .card-back {    
+    transform: rotateY(0deg);
+  }
+
+  .card-header > h3,
+  .card-header > h4 {
+      border-bottom: 3px double #D9560B !important;
+      font-family: 'Open Sans', sans-serif !important;
+  }
+
+  .card-front::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 1.5px;
+    left: 1.5px;
+    right: 1.5px;
+    bottom: 1.5px;
+    border: 3px double rgb(231, 231, 231) !important;
+    border-radius: 3px;      
+}
+
+.card {
+    -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+     box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.card-header,
+.card-footer {
+    background-color: rgba(0,0,0,0) !important;
+    border-bottom: none !important;
+    border-top: none !important;    
+}
+
+.card-footer > a {
+    text-decoration: none !important;
+    color: #295279 !important;
+    cursor: pointer !important;
+}
+
+.card-footer > a:hover {
+    color: #D9560B !important;
+}
+
+.card-back .card-body img  {
+    width: 50%;
+    height: 50%;
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    position: absolute;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+/*===== End Experience = Flip card ======*/
+
+.btn-primary {
+    background-color: #D9560B !important;
+    border-color: #D9560B !important;
+}
+
+.btn-primary:hover {
+    background-color: #D9560B !important;
+    border-color: #D9560B !important;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.05);
+    -webkit-transition: 1s all; 
+    -ms-transition: 1s all; 
+    transition: 1s all;
+}
+
+/*===== Contact======*/
+#contact input::placeholder,
+#contact textarea::placeholder,
+#contact .input-group-text i {
+    color: #053259 !important;
+}
+
+#contact input:focus,
+#contact textarea:focus,
+#contact button:focus{    
+    border-color: #D9560B !important;    
+    outline: none !important;
+    box-shadow: none !important;
+    color: #053259 !important;
+
+}
+/*===== End Contact ======*/
+
+/*===== Footer - Social Media ======*/
+footer {   
+    width: 100% !important;
+    height: auto !important;
+    position: relative;
+    background-color: #D9560B;
+    background-size: cover; 
+    color: #f3f3f3;
+    -webkit-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
+    -moz-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
+     box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
+}
+
+.socialMedia {
+    width: 100% !important;
+    font-size: 1.5rem;   
+    align-items: center;
+    text-align: center;  
+    position: relative;    
+}
+.socialMedia a {
+    color: #f3f3f3;
+    text-decoration: none; 
+    padding: 0 20px;
+}
+
+.socialMedia a:focus {
+    outline: none;
+}
+
+.socialMedia a:hover {
+    display:inline-block;
+    color: #053259;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transition: .5s all; 
+    -ms-transition: .5s all; 
+    transition: .5s all;  
+  }
+
+  /*===== End Footer - Social Media ======*/
