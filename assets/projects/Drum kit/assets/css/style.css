@@ -1,0 +1,56 @@
+html {
+	background-image: linear-gradient(-200deg, rgba(140,140,140,0.6) 0%, rgba(1, 1, 1,0.7) 50%),
+	                  url("../../image/people.jpg");
+	background-size: cover;
+} 
+
+body, html{
+	font-family: Raleway;
+	font-size: 10px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.keys{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key{
+	padding: 1rem 0.5rem;
+	margin: 7px;
+	width: 100px;
+	border: 4px solid black;
+	border-radius: 5px;
+	text-align: center;
+	color: white;
+	background: rgba(0,0,0,0.4);
+	text-shadow: 3px 3px black;
+	transition: all 0.07s linear;
+}
+
+kbd{
+	font-size: 4rem;
+	display: block;
+}
+span{
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+	color: #ffcc00
+}
+
+.playing{
+	transform:scale(1.2);
+	border-color: #ffcc00;
+	box-shadow: 0 0 10px #ffcc00;
+}
+
+.sound{
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffcc00;
+}
+
