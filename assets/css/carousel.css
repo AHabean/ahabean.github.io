@@ -1,11 +1,37 @@
 
-/* Carousel */
+/*PORTFOLIO ==> Carousel */
+
+@media (max-width: 768px) {
+
+  #portfolio img {
+    min-height: 436px !important;
+    width:  100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+  }
+
+  .carousel-inner .carousel-item > div {
+    -webkit-display: none;
+    -moz-display: none;
+    -ms-display: none;
+    -o-display: none;
+    display: none;
+  }
+
+  .carousel-inner .carousel-item > div:first-child {
+    -webkit-display: block;
+    -moz-display: block;
+    -ms-display: block;
+    -o-display: block;
+    display: block;
+  }
+}
 
 #portfolio img {
-  min-height: 436px !important;
-  width:  100% !important;
-  object-fit: cover !important;
-  object-position: center !important;
+  min-height: 436px;
+  width:  100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .carousel-indicators li {
@@ -25,36 +51,51 @@
 .carousel-inner .carousel-item.active,
 .carousel-inner .carousel-item-next,
 .carousel-inner .carousel-item-prev {
+    -webkit-display: flex;
+    -moz-display: flex;
+    -ms-display: flex;
+    -o-display: flex;
     display: flex;
 }
 
-/* display 3 */
-@media (max-width: 768px) {
-  .carousel-inner .carousel-item > div {
-      display: none;
-  }
-  .carousel-inner .carousel-item > div:first-child {
-      display: block;
-  }
-}
-
 .carousel-inner .carousel-item.left.active {
+  -webkit-transform: translateX(-33%);
+  -moz-transform: translateX(-33%);
+  -ms-transform: translateX(-33%);
+  -o-transform: translateX(-33%);
   transform: translateX(-33%);
 }
 .carousel-inner .carousel-item.right.active {
+  -webkit-transform: translateX(33%);
+  -moz-transform: translateX(33%);
+  -ms-transform: translateX(33%);
+  -o-transform: translateX(33%);
   transform: translateX(33%);
 }
 
 .carousel-inner .carousel-item.next {
-  transform: translateX(33%)
+  -webkit-transform: translateX(33%);
+  -moz-transform: translateX(33%);
+  -ms-transform: translateX(33%);
+  -o-transform: translateX(33%);
+  transform: translateX(33%);
 }
+
 .carousel-inner .carousel-item.prev {
+  -webkit-transform: translateX(-33%);
+  -moz-transform: translateX(-33%);
+  -ms-transform: translateX(-33%);
+  -o-transform: translateX(-33%);
   transform: translateX(-33%)
 }
 
 .carousel-inner .carousel-item.right,
 .carousel-inner .carousel-item.left { 
-  transform: translateX(0);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+  -ms-transform: translateX(0%);
+  -o-transform: translateX(0%);
+  transform: translateX(0%);
 }
 
 
@@ -88,14 +129,21 @@
     position: relative;
     -webkit-transition: all 0.4s ease-in;
     -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
   }
   
   .hovereffect:hover img {
-    filter: grayscale(1) blur(3px);
     -webkit-filter: grayscale(1) blur(3px);
+    -moz-filter: grayscale(1) blur(3px);
+    -ms-filter: grayscale(1) blur(3px);
+    -o-filter: grayscale(1) blur(3px);
+    filter: grayscale(1) blur(3px);    
     -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
   } 
   
@@ -111,25 +159,53 @@
   }
   
   .hovereffect a.info:hover {
+    -webkit-box-shadow: 0 0 7px #f3f3f3;
+    -moz-box-shadow: 0 0 7px #f3f3f3;
+    -ms-box-shadow: 0 0 7px #f3f3f3;
+    -o-box-shadow: 0 0 7px #f3f3f3;
     box-shadow: 0 0 7px #f3f3f3;
   }
   
   .hovereffect a.info {
     -webkit-transform: scale(0.7);
+    -moz-transform: scale(0.7);
     -ms-transform: scale(0.7);
+    -o-transform: scale(0.7);
     transform: scale(0.7);
     -webkit-transition: all 0.4s ease-in;
+    -moz-transition: all 0.4s ease-in;
+    -ms-transition: all 0.4s ease-in;
+    -o-transition: all 0.4s ease-in;
     transition: all 0.4s ease-in;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    -ms-opacity: 0;
+    -o-opacity: 0;
     opacity: 0;
+    -webkit-filter: alpha(opacity=0);
+    -moz-filter: alpha(opacity=0);
+    -ms-filter: alpha(opacity=0);
+    -o-filter: alpha(opacity=0);
     filter: alpha(opacity=0);
     color: #f3f3f3;
     text-transform: uppercase;
   }
   
   .hovereffect:hover a.info {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -ms-opacity: 1;
+    -o-opacity: 1;
     opacity: 1;
+    -webkit-filter: alpha(opacity=100);
+    -moz-filter: alpha(opacity=100);
+    -ms-filter: alpha(opacity=100);
+    -o-filter: alpha(opacity=100);
     filter: alpha(opacity=100);
     -webkit-transform: scale(1);
+    -moz-transform: scale(1);
     -ms-transform: scale(1);
+    -o-transform: scale(1);
     transform: scale(1);
   }
+

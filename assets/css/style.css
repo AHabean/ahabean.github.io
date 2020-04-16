@@ -11,6 +11,8 @@ html, body {
 body {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
     box-sizing: border-box;
     /*font-family: 'Lato', sans-serif;*/
     font-family: 'Roboto', sans-serif;
@@ -22,6 +24,8 @@ body {
 
 /*===== Media =====*/
 @media (max-width: 768px) {
+
+    /* General settings */
     #aboutMe h1,
     #skills h1,
     #experience h1,
@@ -38,44 +42,29 @@ body {
         text-indent: 30px !important;
     } 
 
-    .socialMedia {
-       width: 100% !important;
-       font-size: 12px !important;
-       letter-spacing: 10px !important;
-    }
-
-    .socialMedia a:hover {
-       -webkit-transform: none;
-        -ms-transform: none;
-        transform: none !important;
-        -webkit-transition: none; 
-        -ms-transition: none; 
-        transition: none !important;  
-      }
-
-      footer {
-          height: auto !important;
-      }
-
-      footer .container-fluid {
-          padding: 0px !important;
-          margin: 0px !important;
-      }
-
-      .arrowUp {
+    .arrowUp {
         width:30px !important;
         height:30px !important;
         font-size: 20px !important;
         top:-15px !important;
-        transition: none !important;
+        -webkit-transition: none; 
+        -moz-transition: none; 
+        -ms-transition: none; 
+        -o-transition: none; 
+        transition: none !important;  
       } 
 
-      .arrowDown {
+    .arrowDown {
         font-size: 20px !important;
-        transition: none !important;
+        -webkit-transition: none; 
+        -moz-transition: none; 
+        -ms-transition: none; 
+        -o-transition: none; 
+        transition: none !important;  
         width:30px !important;
         height:30px !important;
     }
+    /*HEADER SECTION */
     #banner h1 {
         font-size: 28px !important;
         line-height: 1.2 !important;
@@ -102,24 +91,13 @@ body {
     #education .card-footer a {
         font-size: 13px !important;
     }
+
     .txt,
     #experience .card-body li {
         font-size: 12px !important;
-    }
-    form ::placeholder{
-        font-size: 9px !important;
-        text-align: left;
-        padding: 0px !important;
-        margin: 0px !important;
-    }
+    }   
 
-    .form-group button {
-        font-size: 10px !important;
-    }
-    .form-group i {
-        font-size: 12px !important;
-
-    }
+     /*Navigation bar*/
     #navbar ul li a:hover{
         background: rgb(39, 39, 39) !important; 
         color: #D9560B !important;
@@ -143,6 +121,125 @@ body {
         color: #f3f3f3 !important;
     }
 
+    /* EXPERIENCE */
+
+    /*IMG visible on mobile viewport*/
+    .card-front .card-body img  {
+        width: 30%;
+        height: 30%;
+        top: 30;  
+        bottom: 10px;  
+        left: 30; 
+        right: 20px; 
+        margin: auto;
+        position: absolute;
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat; 
+        display: inline !important;
+    }
+    /*Card flip not active on mobile device*/       
+    .card-back { 
+          display: none !important; 
+          /*opacity: 0 !important;*/
+    }   
+
+    .card-front,
+    .card-back {
+           backface-visibility: hidden;
+    }
+
+    .card-front {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    
+    .card-flip:hover .card-front > .card-header,
+    .card-flip:hover .card-front > .card-body,
+    .card-flip:hover .card-front > .card-footer {
+        -webkit-transform: rotateY(-180deg);
+        -moz-transform: rotateY(-180deg);
+        -ms-transform: rotateY(-180deg);
+        -o-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+        
+    .card-flip:hover .card-back {
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
+    }
+    
+    .card-back .card-body img  {
+        display: none !important;
+    }
+    /*END Card flip not active on mobile device*/
+    /*END EXPERIENCE */
+
+    /*CONTACT FORM*/
+
+    .alignForm {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+
+    form ::placeholder{
+        font-size: 9px !important;
+        text-align: left;
+        padding: 0px !important;
+        margin: 0px !important;
+    }
+
+    .form-group button {
+        font-size: 10px !important;
+    }
+    .form-group i {
+        font-size: 12px !important;
+
+    }
+
+     /*END CONTACT FORM*/
+    
+     /*FOOTER*/
+    .socialMedia {
+        width: 100% !important;
+        font-size: 12px !important;
+        letter-spacing: 10px !important;
+    }
+ 
+    .socialMedia a {
+         line-height: 1.2 !important;
+         padding: 0px !important;
+    }
+ 
+    .socialMedia a:hover {
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none !important;
+        -webkit-transition: none; 
+        -moz-transition: none; 
+        -ms-transition: none; 
+        -o-transition: none; 
+        transition: none !important;  
+    }
+ 
+    footer {
+           height: auto !important;
+    }
+ 
+    footer .container-fluid {
+           padding: 0px !important;
+           margin: 0px !important;
+    }
+    /*END FOOTER*/
 }
 
 @media (min-width: 1024px) {
@@ -178,6 +275,10 @@ body {
     margin: 5px;
     padding-top: 0px;
     font-size: 40px;
+    -webkit-transition: 1s all;
+    -moz-transition:1s all;
+    -ms-transition: 1s all; 
+    -o-transition: 1s all; 
     transition: 1s all;
     color: #D9560B;
     width:60px;
@@ -196,6 +297,10 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+    -webkit-transition: 1s all;
+    -moz-transition:1s all;
+    -ms-transition: 1s all; 
+    -o-transition: 1s all; 
     transition: 1s all;
 }
 
@@ -258,6 +363,10 @@ body {
 #navbar ul li a:hover{
     color: #D9560B;
     position: relative;
+    -webkit-animation: jumping 0.5s 1;
+    -moz-animation: jumping 0.5s 1;
+    -ms-animation: jumping 0.5s 1;
+    -o-animation: jumping 0.5s 1;
     animation: jumping 0.5s 1;
 }
 /*
@@ -267,16 +376,33 @@ body {
 */
 @keyframes jumping {
     0% {
-        transform:translateY(0)
+
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
     25% {
-        transform:translateY(-10px)
+        -webkit-transform: rotateY(-10deg);
+        -moz-transform: rotateY(-10deg);
+        -ms-transform: rotateY(-10px);
+        -o-transform: rotateY(-10px);
+        transform: translateY(-10px);
     }
     75% {
-        transform:translateY(10px)
+        -webkit-transform: rotateY(10deg);
+        -moz-transform: rotateY(10deg);
+        -ms-transform: rotateY(10px);
+        -o-transform: rotateY(10px);
+        transform: translateY(10px);
     }
     100% {
-        transform:translateY(0)
+        -webkit-transform: rotateY(0deg);
+        -moz-transform: rotateY(0deg);
+        -ms-transform: rotateY(0deg);
+        -o-transform: rotateY(0deg);
+        transform: rotateY(0deg);
     }
 }
 
@@ -293,6 +419,10 @@ body {
 }
 
 .nav-item .active:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    -o-animation: none;
     animation: none !important;
 }
 
@@ -322,7 +452,11 @@ nav button:focus {
 	background-color:#f3f3f3 ;
     border:1px solid #f3f3f3;
     border-radius: 5px;
-	box-shadow:inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
+    -webkit-box-shadow: inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
+    -moz-box-shadow: inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
+    -ms-box-shadow: inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
+    -o-box-shadow: inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);   
+	box-shadow: inset 0 0 0px rgba(250, 128, 114, 0.1),1px 1px 3px  rgba(250, 128, 114, 0.1);
 }
 
 .avatarContent:before,.avatarContent:after {
@@ -332,20 +466,28 @@ nav button:focus {
 	top:0;
 	width:100%;
 	height:100%;
-	-webkit-transform:rotateZ(-3deg);
-	-o-transform:rotate(-3deg);
+    -webkit-transform:rotateZ(-3deg);
+    -moz-transform:rotateZ(-3deg);
+    -ms-transform:rotateZ(-3deg);
+	-o-transform:rotateZ(-3deg);
 	transform:rotateZ(-3deg);
     z-index:-1;
     -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
     box-shadow: -10 30px 0px rgba(0, 0, 0, 0.3);  
 }
 .avatarContent:after {
-	-webkit-transform:rotateZ(3deg);
-	-o-transform:rotate(3deg);
+    -webkit-transform:rotateZ(3deg);
+    -moz-transform:rotateZ(3deg);
+    -ms-transform:rotateZ(3deg);
+	-o-transform:rotateZ(3deg);
     transform:rotateZ(3deg);
-    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+    -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.4);
+    -ms-box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
+    -o-box-shadow: 1px 2px 4px rgba(0, 0, 0, .4);
     box-shadow: 0px 10px 14px rgba(0, 0, 0, .4);
 }
 
@@ -375,26 +517,24 @@ nav button:focus {
 
 /*===== Progress bar ====== */
 .bckground {
-    width: 100% !important;
-    height: auto !important;
-    position: relative;
-    background-color: rgba(221, 221, 220, 0.856);
+    width: auto;
+    height: auto;
+    background-color: rgba(221, 221, 220, 0.856); 
     background-size: cover;
     -webkit-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
     -moz-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
-     box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+    -ms-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+    -o-box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.3), -5px -5px 30px rgba(0, 0, 0, 0.3); 
     border-radius: 10px;
-}
-
-.progressBar-width {
-    width: 90% !important; 
-    vertical-align: middle !important;
 }
 
 .progress .progress-bar {
     width: 0;
-    -moz-animation: progress 0.9s ease-in-out forwards;
     -webkit-animation: progress 0.9s ease-in-out forwards;
+    -moz-animation: progress 0.9s ease-in-out forwards;
+    -ms-animation: progress 0.9s ease-in-out forwards;
+    -o-animation: progress 0.9s ease-in-out forwards;
     animation: progress 0.9s ease-in-out forwards;
     background-color: #D9560B !important;
 }
@@ -403,14 +543,24 @@ nav button:focus {
     background-color: rgb(255, 255, 255) !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
     box-shadow: none;
   }
 
   @keyframes show {
       from {
+        -webkit-opacity: 0;
+        -moz-opacity: 0;
+        -ms-opacity: 0;
+        -o-opacity: 0;
         opacity: 0;
       }
       to {
+        -webkit-opacity: 1;
+        -moz-opacity: 1;
+        -ms-opacity: 1;
+        -o-opacity: 1;
         opacity: 1;
       }
 }
@@ -420,7 +570,15 @@ nav button:focus {
 /*===== Experience = Flip card ======*/
 .card-flip > div {
     backface-visibility: hidden;
+    -webkit-transition: transform 300ms;
+    -moz-transition: transform 300ms;
+    -ms-transition: transform 300ms;
+    -o-transition: transform 300ms;
     transition: transform 300ms;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -ms-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
     transition-timing-function: linear;
     margin: 0;
     width: 100%;
@@ -428,10 +586,7 @@ nav button:focus {
     display: flex;
   }
   
-  .card-front {
-    transform: rotateY(0deg);
-  }
-  
+   
   .card-back {  
       width: 100%;
       height: 100%; 
@@ -449,13 +604,29 @@ nav button:focus {
        backface-visibility: hidden;
   }
 
+  .card-front {
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+
 .card-flip:hover .card-front > .card-header,
 .card-flip:hover .card-front > .card-body,
 .card-flip:hover .card-front > .card-footer {
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
     transform: rotateY(-180deg);
   }
     
 .card-flip:hover .card-back {    
+    -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    -ms-transform: rotateY(0deg);
+    -o-transform: rotateY(0deg);
     transform: rotateY(0deg);
   }
 
@@ -480,6 +651,8 @@ nav button:focus {
 .card {
     -webkit-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
     -moz-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
+    -o-box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2);
      box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.2); 
 }
 
@@ -516,6 +689,7 @@ nav button:focus {
 }
 /*===== End Experience = Flip card ======*/
 
+/*===== Contact======*/
 .btn-primary {
     background-color: #D9560B !important;
     border-color: #D9560B !important;
@@ -525,14 +699,17 @@ nav button:focus {
     background-color: #D9560B !important;
     border-color: #D9560B !important;
     -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.05);
     -webkit-transition: 1s all; 
+    -moz-transition: 1s all; 
     -ms-transition: 1s all; 
+    -o-transition: 1s all; 
     transition: 1s all;
 }
 
-/*===== Contact======*/
 #contact input::placeholder,
 #contact textarea::placeholder,
 #contact .input-group-text i {
@@ -544,9 +721,17 @@ nav button:focus {
 #contact button:focus{    
     border-color: #D9560B !important;    
     outline: none !important;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    -ms-box-shadow: none;
+    -o-box-shadow: none;
     box-shadow: none !important;
     color: #053259 !important;
+}
 
+.alignForm {
+    margin-left: 3rem;
+    margin-right: 3rem;
 }
 /*===== End Contact ======*/
 
@@ -560,6 +745,8 @@ footer {
     color: #f3f3f3;
     -webkit-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
     -moz-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
+    -ms-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
+    -o-box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
      box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3); 
 }
 
@@ -584,10 +771,14 @@ footer {
     display:inline-block;
     color: #053259;
     -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
     -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
     transform: scale(1.2);
     -webkit-transition: .5s all; 
+    -moz-transition: .5s all; 
     -ms-transition: .5s all; 
+    -o-transition: .5s all; 
     transition: .5s all;  
   }
 
