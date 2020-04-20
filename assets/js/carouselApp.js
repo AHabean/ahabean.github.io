@@ -4,7 +4,7 @@ $('#projectCarousel').carousel({
 
  
   $('.carousel .carousel-item').each(function(){
-      //var minPerSlide = 0;
+      var minPerSlide = 2;
       var next = $(this).next();
       if (!next.length) {
         next = $(this).siblings(':first');
@@ -18,7 +18,6 @@ $('#projectCarousel').carousel({
       }
 
 
-      /*
       for (var i=0; i < minPerSlide; i++) {
           next = next.next();
           if (!next.length) {
@@ -27,7 +26,6 @@ $('#projectCarousel').carousel({
           
           next.children(':first-child').clone().appendTo($(this));
         }
-      */
   });
 
 

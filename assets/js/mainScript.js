@@ -1,4 +1,4 @@
-//===== Put the navbar from bottom to stay fixed on top when we scroll on the page =====//
+//===== Put the navbar from bottom to stay fixed on top when we scroll =====//
 
 //Get the #navbar from DOM
 var navbar = document.querySelector("#navbar");
