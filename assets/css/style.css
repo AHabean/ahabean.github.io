@@ -35,6 +35,7 @@ body {
         -o-background-size: cover !important;
         background-size: cover !important;
         background-color: #f3f3f3 !important;
+        object-fit: cover !important;
     }
 
     /* General settings */
@@ -115,22 +116,34 @@ body {
         color: #D9560B !important;
         animation: none !important;
     }
+
     #navbar ul li a {
         padding: 8px 15px !important;
         font-size: 14px !important;
         font-weight: normal !important;
         text-transform: capitalize !important;
     }
+
     .spaceAround {
         padding: 5px !important;        
     }
+
     .navbar-toggler {
         font-size: 15px !important;
         padding: 5px !important;        
     }
+
     #navbar .active {
         background: none !important; 
         color: #f3f3f3 !important;
+    }
+
+    /*===== Navbar onload at bottom =====*/
+    .bottom-nav {	
+        position: absolute !important;
+        z-index:999 !important;
+        bottom:0px !important;
+        width: 100% !important;
     }
 
     /* EXPERIENCE */
@@ -244,12 +257,12 @@ body {
     }
  
     footer {
-           height: auto !important;
+        height: auto !important;
     }
  
     footer .container-fluid {
-           padding: 0px !important;
-           margin: 0px !important;
+        padding: 0px !important;
+        margin: 0px !important;
     }
     /*END FOOTER */
 }
@@ -273,8 +286,6 @@ body {
     background-size: cover;
     background-color: #f3f3f3;
 }
-
-/*===== Navbar =====*/
 
 .arrowDown {
     margin: 5px;
@@ -332,6 +343,9 @@ body {
     line-height: 0.8;   
 }
 
+/*===== END Banner parallax =====*/
+
+/*===== Navbar =====*/
 #navbar,
 #navbar .container {
     padding: 0 !important;
@@ -342,12 +356,22 @@ body {
     padding: 0 !important;
 }
 
+/*===== Navbar onload at bottom =====*/
 .bottom-nav {	
 	position: absolute;
     z-index:999;
     bottom:0px;
     width: 100%;
 }
+
+/*===== Navbar on scroll at top =====*/
+.top-nav {	
+	position: fixed;
+    top: 0 !important;
+    z-index:999;
+    width: 100%;
+}
+
 
 #navbar ul li a {
     padding: 15px 50px;
@@ -407,13 +431,6 @@ body {
     }
 }
 
-.top-nav {	
-	position: fixed;
-    top: 0 !important;
-    z-index:999;
-    width: 100%;
-}
-
 #navbar .active {
     background: rgb(39, 39, 39); 
     color: #D9560B;
@@ -430,6 +447,8 @@ body {
 nav button:focus {
     outline: 0 !important;
 }
+
+/*===== END Nav bar =====*/
 
 
 /*===== About me =====*/
