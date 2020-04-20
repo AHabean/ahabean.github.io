@@ -359,7 +359,7 @@ body {
 /*===== Navbar onload at bottom =====*/
 .bottom-nav {	
 	position: absolute;
-    z-index:999;
+    z-index: 999;
     bottom:0px;
     width: 100%;
 }
@@ -368,7 +368,7 @@ body {
 .top-nav {	
 	position: fixed;
     top: 0 !important;
-    z-index:999;
+    z-index: 999;
     width: 100%;
 }
 
