@@ -24,20 +24,18 @@ body {
 
 /*===== Media =====*/
 @media (max-width: 768px) {
-    /*
+    
     #banner {
         height: 100vh !important;
         color: #D9560B !important;
         background-image: url('../img/project/earth.jpg') !important;  
         background-size: cover !important;
-        background-attachment: fixed !important;
+        background-attachment: scroll !important;
         background-position: center !important;
         background-repeat: no-repeat !important;
         background-color: #f3f3f3 !important;
-        object-fit: cover !important;
-        object-position: center !important;
       }
-*/
+
     /* General settings */
     #aboutMe h1,
     #skills h1,
@@ -275,7 +273,7 @@ body {
     color: #D9560B;
     background-image: url('../img/project/earth.jpg');  
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-color: #f3f3f3;
