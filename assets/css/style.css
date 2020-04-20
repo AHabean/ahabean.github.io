@@ -28,13 +28,14 @@ body {
     #banner {
         height: 100vh !important;
         color: #D9560B !important;
-        background-image: url('../img/project/earth.jpg') !important;  
+        background: url('../img/project/earth.jpg') no-repeat center center scroll !important;  
+        -webkit-background-size: cover !important;
+        -moz-background-size: cover !important;
+        -ms-background-size: cover !important;
+        -o-background-size: cover !important;
         background-size: cover !important;
-        background-attachment: scroll !important;
-        background-position: center !important;
-        background-repeat: no-repeat !important;
         background-color: #f3f3f3 !important;
-      }
+    }
 
     /* General settings */
     #aboutMe h1,
