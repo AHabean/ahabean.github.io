@@ -140,7 +140,7 @@ body {
 
     /*===== Navbar onload at bottom =====*/
     .bottom-nav {	
-        position: absolute !important;
+        position: relative !important;
         z-index:999 !important;
         bottom:0px !important;
         width: 100% !important;
