@@ -250,15 +250,15 @@ body {
            padding: 0px !important;
            margin: 0px !important;
     }
-    /*END FOOTER*/
+    /*END FOOTER */
 }
-
+/*
 @media (min-width: 768px) {
     #banner {
-      background-attachment: fixed;
+      background-attachment: fixed !important;
     }
   }
-
+*/
 
 
 /*===== Banner parallax =====*/
