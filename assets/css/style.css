@@ -601,14 +601,6 @@ nav button:focus {
 /*===== End Progress bar ======*/
 
 /*===== Experience = Flip card ======*/
-.padBtmAroundCardDeck {
-    padding-bottom: 16px;
-}
-
-.padTopAroundCardDeck {
-    padding-top: 16px;
-}
-
 .card-flip > div {
     backface-visibility: hidden;
     -webkit-transition: transform 300ms;
